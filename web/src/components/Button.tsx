@@ -1,5 +1,5 @@
 import { FaPlusCircle } from "react-icons/fa";
-import { HiOutlineTrash} from 'react-icons/hi2'
+import { HiOutlineTrash } from "react-icons/hi2";
 
 export function CreateButton() {
   return (
@@ -15,8 +15,11 @@ export function CreateButton() {
 
 export function DeleteButton() {
   return (
-    <button type="submit" className="p-4 rounded-lg hover:bg-gray-400 text-gray-300 hover:text-danger">
-      <HiOutlineTrash size={20}/>
+    <button
+      type="submit"
+      className="p-4 rounded-lg  hover:bg-gray-400 text-gray-300 hover:text-danger"
+    >
+      <HiOutlineTrash size={20} />
     </button>
   );
 }
