@@ -2,16 +2,13 @@ import { BiCheck } from "react-icons/all";
 
 import * as Checkbox from "@radix-ui/react-checkbox";
 
-interface InputTextProps {
-  placeholder: string;
-}
 
-export function InputText({placeholder, ...props }:InputTextProps) {
+export function InputText({...props }) {
   return (
     <label className="w-full max-w-lg">
       <input
         className="w-full rounded text-base p-4 bg-gray-500 placeholder:text-gray-300 focus:outline-none focus:ring focus:ring-blue"
-        placeholder={placeholder}
+        placeholder= {"Adicione uma nova tarefa"}
         {...props}
       />
     </label>
