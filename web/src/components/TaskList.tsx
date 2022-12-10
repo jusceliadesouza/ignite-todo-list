@@ -7,7 +7,7 @@ interface TaskListProps {
 }
 
 export function TaskList({ tasksCreated, concludedTasks }: TaskListProps) {
-    return (
+  return (
     <div className="flex flex-col gap-4 items-center justify-center text-gray-300 mt-16">
       <div className="w-full flex justify-between text-gray-200">
         <div className="flex gap-2 items-center font-bold">
