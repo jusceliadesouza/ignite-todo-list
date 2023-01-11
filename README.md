@@ -19,4 +19,9 @@ Desafio de código de uma aplicação de controle de tarefas estilo **to-do list
 
 ## Como executar
 
-Após clonar o projeto na sua máquina, utilize o `npm start` para instalar as dependências e `npm run dev` para rodar o projeto.
+Para executar o projeto na sua máquina:
+
+1. Clone o repositório `https://github.com/jusceliadesouza/ignite-todo-list.git`
+2. Instale as dependências utilizando o comando `npm install` ou `yarn`.
+3. Execute o projeto com o comando `npm run dev` ou `yarn dev`.
+4. No seu navegador, acesse http://localhost:5173
