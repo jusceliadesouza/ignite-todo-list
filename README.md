@@ -19,3 +19,4 @@ Desafio de código de uma aplicação de controle de tarefas estilo **to-do list
 
 ## Como executar
 
+Após clonar o projeto na sua máquina, utilize o `npm start` para instalar as dependências e `npm run dev` para rodar o projeto.
