@@ -9,8 +9,33 @@
 
 ## 🔧 Executando
 
-### Clone o projeto
+### Instale o pacote
+
+Usando `npm`:
 
 ```bash
-  git clone https://github.com/jusceliadesouza/ignite-todo-list.git
+  npm install
+```
+
+Usando `yarn`:
+
+```bash
+  yarn
+```
+
+### Execute o projeto
+
+```bash
+  # Usando npm
+  npm run dev
+
+  # Usando yarn
+  yarn dev
+
+```
+
+### Acesse o projeto no browser
+
+```html
+  http://localhost:5173
 ```

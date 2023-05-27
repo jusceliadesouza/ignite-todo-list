@@ -23,4 +23,4 @@ Desafio de código de uma aplicação de controle de tarefas estilo **to-do list
 
 - [Web](/web/README.md)
 
-- [Mobile](/mobile/)
+- [Mobile](/mobile/README.md)
