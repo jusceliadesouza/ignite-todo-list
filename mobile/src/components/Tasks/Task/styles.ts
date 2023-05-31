@@ -15,16 +15,15 @@ export const styles = StyleSheet.create({
   },
   checked: {
     borderRadius: 999,
-    borderWidth: 4,
-  },
-  unchecked: {
+    borderWidth: 5,
   },
   content: {
     flexDirection: "row",
-    alignItems: "center",
     justifyContent: 'space-between'
   },
-  text: {
+  name: {
+    flex: 1,
+    marginLeft: 16,
     color: '#F2F2F2'
   },
 })

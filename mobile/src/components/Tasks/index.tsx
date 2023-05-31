@@ -1,39 +1,59 @@
-import { useState } from "react"
 import { View, Text, FlatList } from "react-native"
 
-import Empty from "../Empty"
-
-import { styles } from "./styles"
+import { Empty } from "../Empty"
 import { Task } from "./Task"
 
-export function Tasks() {
-  const [tasks, setTasks] = useState()
+import { styles } from "./styles"
+
+type Props = {
+  tasks: string[]
+  onRemove: (name: string) => void
+}
+
+export function Tasks({ tasks, onRemove }: Props) {
 
   return (
     <View style={styles.container}>
       <View style={styles.info}>
-        <Text style={styles.infoCreated}>
-          Criadas{"  "}
-
-          <View style={styles.counter}>
-            <Text style={styles.counterText}>0</Text>
-          </View>
-        </Text>
-
-        <Text style={styles.infoDone}>
-          Concluídas{" "}
+        <View style={styles.infoText}>
+          <Text style={styles.infoCreatedText}>
+            Criadas{"  "}
+            
+          </Text>
           
           <View style={styles.counter}>
             <Text style={styles.counterText}>0</Text>
           </View>
-        </Text>
+        </View>
+
+
+        <View style={styles.infoText}>
+          <Text style={styles.infoDoneText}>
+            Concluídas{"  "}
+          </Text>
+
+          <View style={styles.counter}>
+            <Text style={styles.counterText}>0</Text>
+          </View>
+        </View>
       </View>
 
-      <Task />
+      <FlatList
+        data={tasks}
+        keyExtractor={item => item}
+        renderItem={({ item }) => (
+          <Task 
+            key={item}
+            name={item}
+            onRemove={() => onRemove(item)} />
+          )
+        }
 
-      <View>
-
-      </View>
+        showsVerticalScrollIndicator={false}
+        ListEmptyComponent={() => (
+          <Empty />
+        )}
+      />
     </View>  
   )
 }

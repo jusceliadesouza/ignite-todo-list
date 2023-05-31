@@ -4,7 +4,7 @@ import clipboard from '../../assets/clipboard.png'
 
 import { styles } from "./styles";
 
-export default function Empty() {
+export function Empty() {
   return (
     <View style={styles.container}>
       <View style={styles.content}>

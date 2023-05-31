@@ -1,11 +1,39 @@
-import { Image, Text, TextInput, TouchableOpacity, View } from "react-native"
+import { useState } from "react";
+import { Alert, Image, TextInput, TouchableOpacity, View } from "react-native"
+import { Feather } from '@expo/vector-icons';
+
+import { Tasks } from "../../components/Tasks"
 
 import logo from '../../assets/logo.png'
 
 import { styles } from "./styles"
-import { Tasks } from "../../components/Tasks"
 
 export default function Home() {
+  const [tasks, setTasks] = useState<string[]>([])
+  const [taskName, setTaskName] = useState("")
+  
+  function handleTaskAdd() {
+    if(tasks.includes(taskName)) {
+      return Alert.alert("Ops!", "Você já adicionou essa tarefa. Insira um nome diferente para a nova tarefa.")
+    }
+
+    setTasks(prevState => [...prevState, taskName])
+    setTaskName('')
+  }
+
+  function handleTaskRemove(name: string) {
+    Alert.alert('Remover', `Você tem certeza que deseja remover a tarefa ${name}?`, [
+      {
+        text: 'Sim',
+        onPress: () => setTasks(prevState => prevState.filter(task => task !== name))
+      },
+      {
+        text: 'Não',
+        style: 'cancel'
+      }
+    ])
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -17,19 +45,19 @@ export default function Home() {
           style={styles.input}
           placeholder="Adicione uma nova tarefa"
           placeholderTextColor='#808080'
+          onChangeText={setTaskName}
+          value={taskName}
         />
 
       <TouchableOpacity
         style={styles.button}
+        onPress={handleTaskAdd}
       >
-        <Text style={styles.buttonText}>
-          +
-        </Text>
-        
+        <Feather name="plus-circle" size={20} color="#F2F2F2" />
       </TouchableOpacity>
       </View>
 
-      <Tasks />
+      <Tasks tasks={tasks} onRemove={() => handleTaskRemove(taskName)}  />
 
     </View>
   )

@@ -2,17 +2,20 @@ import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
   container: {
-    
+    width: 345
   },
   info: {
     flexDirection: 'row',
-    gap: 172
+    justifyContent: 'space-between'
   },
-  infoCreated: {
+  infoText: {
+    flexDirection: 'row',
+  },
+  infoCreatedText: {
     color: '#4EA8DE',
     fontWeight: 'bold',
   },
-  infoDone: {
+  infoDoneText: {
     color: '#8284FA',
     fontWeight: 'bold',
   },

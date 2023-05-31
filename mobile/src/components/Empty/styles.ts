@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
     borderTopColor: '#808080',
     alignItems: "center",
     justifyContent: 'center',
+    marginTop: 20
   },
   content: {
     alignItems: 'center',

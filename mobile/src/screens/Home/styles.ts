@@ -27,6 +27,7 @@ export const styles = StyleSheet.create({
     borderRadius: 6,
     marginRight: 6,
     padding: 16,
+    color: '#f2f2f2'
     
   },
   button: {
@@ -37,8 +38,4 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#1E6F9F',
   },
-  buttonText: {
-    color: '#F2F2F2',
-    fontSize: 32
-  },  
 })

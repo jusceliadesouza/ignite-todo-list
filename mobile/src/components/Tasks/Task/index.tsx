@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Checkbox from "expo-checkbox";
 
 import { styles } from "./styles";
-import { useState } from "react";
 
-export function Task() {
+type Props = {
+  name: string,
+  onRemove: () => void
+}
+
+export function Task({name, onRemove}: Props) {
   const [isChecked, setChecked] = useState(false)
 
   function handleCheckboxChecked() {
@@ -30,11 +35,13 @@ export function Task() {
           color={isChecked ? '#5E60CE':  "#4EA8DE"} 
         />
         
-        <Text style={styles.text}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit
+        <Text style={styles.name}>
+          {name}
         </Text>
 
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={onRemove}
+        >
           <MaterialCommunityIcons   
             name="trash-can-outline" 
             color="#808080" 
