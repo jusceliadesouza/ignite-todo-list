@@ -1,11 +1,10 @@
-import { EmptyTaskList } from "./components/EmptyTaskList";
+import { useState } from 'react'
 import { TaskList } from "./components/TaskList";
 
 import Header from "./components/Header";
-import { useState } from "react";
 
-function App() {
-  const [] = useState();
+export default function App() {
+  const [tasks, setTasks] = useState<string[]>([])
 
   return (
     <div className="flex flex-col gap-4 items-center justify-center">
@@ -17,5 +16,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
