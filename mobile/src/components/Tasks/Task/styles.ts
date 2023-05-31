@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
+import { theme } from "../../../theme";
 
 export const styles = StyleSheet.create({
   container: {
     maxWidth: 350,
     height: 64,
     marginTop: 20,
-    backgroundColor: '#262626',
+    backgroundColor: theme.colors.gray[500],
     borderRadius: 8,
     padding: 12,
     justifyContent: 'center'
@@ -24,6 +25,6 @@ export const styles = StyleSheet.create({
   name: {
     flex: 1,
     marginLeft: 16,
-    color: '#F2F2F2'
+    color: theme.colors.gray[100]
   },
 })

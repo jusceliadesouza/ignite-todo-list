@@ -4,6 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Checkbox from "expo-checkbox";
 
 import { styles } from "./styles";
+import { theme } from "../../../theme";
 
 type Props = {
   name: string,
@@ -32,7 +33,11 @@ export function Task({name, onRemove}: Props) {
           }
           value={isChecked}
           onValueChange={handleCheckboxChecked}
-          color={isChecked ? '#5E60CE':  "#4EA8DE"} 
+          color={
+            isChecked 
+              ? theme.colors.brand.purpleDark
+              : theme.colors.brand.blue
+            } 
         />
         
         <Text style={styles.name}>

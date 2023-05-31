@@ -45,9 +45,9 @@ export function Tasks({ tasks, onRemove }: Props) {
           <Task 
             key={item}
             name={item}
-            onRemove={() => onRemove(item)} />
-          )
-        }
+            onRemove={() => onRemove(item)} 
+          />
+        )}
 
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={() => (

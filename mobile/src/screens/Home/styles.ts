@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { theme } from "../../theme";
 
 export const styles = StyleSheet.create({
   container: {
@@ -11,7 +12,7 @@ export const styles = StyleSheet.create({
     height: 173,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#0D0D0D',
+    backgroundColor: theme.colors.gray[700],
   },
   form: {
     flexDirection: 'row',
@@ -22,12 +23,14 @@ export const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     borderWidth: 1,
-    borderColor: '#0D0D0D',
-    backgroundColor: '#262626',
+    borderColor: theme.colors.gray[700],
+    backgroundColor: theme.colors.gray[500],
     borderRadius: 6,
     marginRight: 6,
     padding: 16,
-    color: '#f2f2f2'
+    color: theme.colors.gray[100],
+  },
+  inputFocus: {
     
   },
   button: {
@@ -36,6 +39,6 @@ export const styles = StyleSheet.create({
     borderRadius: 6,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#1E6F9F',
+    backgroundColor: theme.colors.brand.blueDark,
   },
 })

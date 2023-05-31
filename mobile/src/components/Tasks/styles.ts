@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+import { theme } from "../../theme"
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,15 +13,15 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   infoCreatedText: {
-    color: '#4EA8DE',
+    color: theme.colors.brand.blue,
     fontWeight: 'bold',
   },
   infoDoneText: {
-    color: '#8284FA',
+    color: theme.colors.brand.purple,
     fontWeight: 'bold',
   },
   counter: {
-    backgroundColor: '#333333',
+    backgroundColor: theme.colors.gray[400],
     borderRadius: 999,
     paddingLeft: 8,
     paddingRight: 8,
@@ -29,6 +30,6 @@ export const styles = StyleSheet.create({
   },
   counterText: {
     fontSize: 12,
-    color: '#D9D9D9',
+    color: theme.colors.gray[200],
   }, 
 })

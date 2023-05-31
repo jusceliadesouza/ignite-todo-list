@@ -7,8 +7,11 @@ import { Tasks } from "../../components/Tasks"
 import logo from '../../assets/logo.png'
 
 import { styles } from "./styles"
+import { theme } from "../../theme";
 
 export default function Home() {
+  
+
   const [tasks, setTasks] = useState<string[]>([])
   const [taskName, setTaskName] = useState("")
   
@@ -33,7 +36,8 @@ export default function Home() {
       }
     ])
   }
-
+  
+  
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -41,24 +45,25 @@ export default function Home() {
       </View>
         
       <View style={styles.form}>
+
         <TextInput
           style={styles.input}
           placeholder="Adicione uma nova tarefa"
-          placeholderTextColor='#808080'
+          placeholderTextColor= {theme.colors.gray[300]}
           onChangeText={setTaskName}
           value={taskName}
+          autoFocus
         />
 
       <TouchableOpacity
         style={styles.button}
         onPress={handleTaskAdd}
       >
-        <Feather name="plus-circle" size={20} color="#F2F2F2" />
+        <Feather name="plus-circle" size={20} color={theme.colors.gray[200]} />
       </TouchableOpacity>
       </View>
 
       <Tasks tasks={tasks} onRemove={() => handleTaskRemove(taskName)}  />
-
     </View>
   )
 }
