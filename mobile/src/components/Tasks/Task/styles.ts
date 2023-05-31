@@ -10,6 +10,10 @@ export const styles = StyleSheet.create({
     padding: 12,
     justifyContent: 'center'
   },
+  checkbox: {
+    borderRadius: 999,
+    padding: 8,
+  },
   content: {
     flexDirection: "row",
     alignItems: "center",
