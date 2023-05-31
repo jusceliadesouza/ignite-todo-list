@@ -12,7 +12,12 @@ export const styles = StyleSheet.create({
   },
   checkbox: {
     borderRadius: 999,
-    padding: 8,
+  },
+  checked: {
+    borderRadius: 999,
+    borderWidth: 4,
+  },
+  unchecked: {
   },
   content: {
     flexDirection: "row",

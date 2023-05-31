@@ -20,10 +20,14 @@ export function Task() {
     <View style={styles.container}>
       <View style={styles.content}>
         <Checkbox 
-          style={styles.checkbox}
+          style={
+            isChecked 
+              ? styles.checked 
+              : styles.checkbox
+          }
           value={isChecked}
           onValueChange={handleCheckboxChecked}
-          color={isChecked ? '#5E60CE': "#4EA8DE"} 
+          color={isChecked ? '#5E60CE':  "#4EA8DE"} 
         />
         
         <Text style={styles.text}>
@@ -31,7 +35,11 @@ export function Task() {
         </Text>
 
         <TouchableOpacity>
-          <MaterialCommunityIcons name="trash-can-outline" size={20} color="#808080" />
+          <MaterialCommunityIcons   
+            name="trash-can-outline" 
+            color="#808080" 
+            size={20} 
+          />
         </TouchableOpacity>
       </View>
     </View>
