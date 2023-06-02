@@ -19,7 +19,7 @@ Desafio de código de uma aplicação de controle de tarefas estilo **to-do list
 
 ### Selecione a pasta
 
-- [Server](/server/)
+<!-- - [Server](/server/README.md) -->
 
 - [Web](/web/README.md)
 

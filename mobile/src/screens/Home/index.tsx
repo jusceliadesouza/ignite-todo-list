@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Alert, Image, TextInput, TouchableOpacity, View } from "react-native"
+import { Alert, FlatList, Image, Text, TextInput, TouchableOpacity, View } from "react-native"
 import { Feather } from '@expo/vector-icons';
 
-import { Tasks } from "../../components/Tasks"
+import { Empty } from "../../components/Empty";
+import { Task } from "../../components/Task";
 
 import logo from '../../assets/logo.png'
 
@@ -10,8 +11,6 @@ import { styles } from "./styles"
 import { theme } from "../../theme";
 
 export default function Home() {
-  
-
   const [tasks, setTasks] = useState<string[]>([])
   const [taskName, setTaskName] = useState("")
   
@@ -28,7 +27,7 @@ export default function Home() {
     Alert.alert('Remover', `Você tem certeza que deseja remover a tarefa ${name}?`, [
       {
         text: 'Sim',
-        onPress: () => setTasks(prevState => prevState.filter(task => task !== name))
+        onPress: () => setTasks(prevState => prevState.filter(task => task !== name)),
       },
       {
         text: 'Não',
@@ -37,7 +36,6 @@ export default function Home() {
     ])
   }
   
-  
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -45,14 +43,12 @@ export default function Home() {
       </View>
         
       <View style={styles.form}>
-
         <TextInput
           style={styles.input}
           placeholder="Adicione uma nova tarefa"
           placeholderTextColor= {theme.colors.gray[300]}
           onChangeText={setTaskName}
           value={taskName}
-          autoFocus
         />
 
       <TouchableOpacity
@@ -63,7 +59,48 @@ export default function Home() {
       </TouchableOpacity>
       </View>
 
-      <Tasks tasks={tasks} onRemove={() => handleTaskRemove(taskName)}  />
+      <View style={styles.taskContainer}>
+        <View style={styles.info}>
+          <View style={styles.infoText}>
+            <Text style={styles.infoCreatedText}>
+              Criadas{"  "}
+              
+            </Text>
+            
+            <View style={styles.counter}>
+              <Text style={styles.counterText}>0</Text>
+            </View>
+          </View>
+
+
+          <View style={styles.infoText}>
+            <Text style={styles.infoDoneText}>
+              Concluídas{"  "}
+            </Text>
+
+            <View style={styles.counter}>
+              <Text style={styles.counterText}>0</Text>
+            </View>
+          </View>
+        </View>
+
+        <FlatList
+          data={tasks}
+          keyExtractor={item => item}
+          renderItem={({ item }) => (
+            <Task 
+              key={item}
+              name={item}
+              onRemove={() => handleTaskRemove(item)} 
+            />
+          )}
+
+          showsVerticalScrollIndicator={false}
+          ListEmptyComponent={() => (
+            <Empty />
+          )}
+        />
+      </View>
     </View>
   )
 }

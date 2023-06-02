@@ -31,7 +31,8 @@ export const styles = StyleSheet.create({
     color: theme.colors.gray[100],
   },
   inputFocus: {
-    
+    borderColor: theme.colors.brand.purple,
+    underlineColor: 'transparent',
   },
   button: {
     width: 60,
@@ -41,4 +42,33 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: theme.colors.brand.blueDark,
   },
+  
+  taskContainer: {
+    width: 345
+  },
+  info: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  infoText: {
+    flexDirection: 'row',
+  },
+  infoCreatedText: {
+    color: theme.colors.brand.blue,
+    fontWeight: 'bold',
+  },
+  infoDoneText: {
+    color: theme.colors.brand.purple,
+    fontWeight: 'bold',
+  },
+  counter: {
+    backgroundColor: theme.colors.gray[400],
+    borderRadius: 999,
+    paddingLeft: 8,
+    paddingRight: 8,
+  },
+  counterText: {
+    fontSize: 12,
+    color: theme.colors.gray[200],
+  }, 
 })

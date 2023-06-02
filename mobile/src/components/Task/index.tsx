@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Checkbox from "expo-checkbox";
 
 import { styles } from "./styles";
-import { theme } from "../../../theme";
+import { theme } from "../../theme";
 
 type Props = {
   name: string,
