@@ -4,9 +4,9 @@ Desafio de código de uma aplicação de controle de tarefas estilo **to-do list
 
 ## Features
 
-- [ ] Adicionar uma nova tarefa
-- [ ] Marcar e desmarcar uma tarefa como concluída
-- [ ] Remover de tarefa da listagem
+- [x] Adicionar uma nova tarefa
+- [x] Marcar e desmarcar uma tarefa como concluída
+- [x] Remover de tarefa da listagem
 - [ ] Mostrar progresso de conclusão das tarefas
 
 ## 🔧 Executando
