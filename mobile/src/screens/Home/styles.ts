@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
   form: {
     flexDirection: 'row',
     padding: 24,
-    marginTop: -50,
+    marginTop: -55,
   },
   input: {
     flex: 1,

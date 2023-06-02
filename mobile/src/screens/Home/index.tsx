@@ -35,6 +35,8 @@ export default function Home() {
       }
     ])
   }
+
+  const tasksCreated = tasks.length
   
   return (
     <View style={styles.container}>
@@ -68,7 +70,7 @@ export default function Home() {
             </Text>
             
             <View style={styles.counter}>
-              <Text style={styles.counterText}>0</Text>
+              <Text style={styles.counterText}>{tasksCreated}</Text>
             </View>
           </View>
 
@@ -91,7 +93,7 @@ export default function Home() {
             <Task 
               key={item}
               name={item}
-              onRemove={() => handleTaskRemove(item)} 
+              onRemove={() => handleTaskRemove(item)}
             />
           )}
 
