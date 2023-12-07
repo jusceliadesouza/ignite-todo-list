@@ -1,4 +1,4 @@
-import { BiCheck } from "react-icons/all";
+import { BiCheck } from "react-icons/bi";
 
 import * as Checkbox from "@radix-ui/react-checkbox";
 
