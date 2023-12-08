@@ -10,7 +10,7 @@ export function CreateButton ({ ...rest }: Props) {
   return (
     <button
       type='submit'
-      className='flex items-center p-4 gap-2 rounded-lg bg-dark-blue hover:bg-blue font-bold text-sm transition-all'
+      className='flex items-center p-4 gap-2 rounded bg-dark-blue hover:bg-blue font-bold text-sm transition-all'
       {...rest}
     >
       Criar
