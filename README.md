@@ -2,14 +2,14 @@
 
 Code challenge of a task control application **to-do list**, using concepts of state, immutability, lists and keys, properties and componetization.
 
-## 🛠️ Features
+## ✅ Features
 
 - [x] Add a new task
 - [x] Mark and deselect a task as complete
 - [x] Delete from task from list
 - [ ] Show task completion progress
 
-## 🔧 Running
+## 💻 Running
 
 ### 💕 Clone the project
 
@@ -28,7 +28,7 @@ Code challenge of a task control application **to-do list**, using concepts of s
 ## 🌍 Translations
 
 - [Portuguese Brazil](./README.pt-br.Md)
-- [English](./../README.Md)
+- [English](./README.md)
 - [Spanish](./README.es.Md)
 
 ## 📝 License

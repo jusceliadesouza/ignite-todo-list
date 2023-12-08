@@ -2,7 +2,7 @@
 
 Desafio de código de uma aplicação de controle de tarefas estilo **to-do list**, utilizando conceitos de estado, imutabilidade, listas e chaves, propriedades e componetização.
 
-## 🛠️ Features
+## ✅ Features
 
 - [x] Adicionar uma nova tarefa
 - [x] Marcar e desmarcar uma tarefa como concluída
@@ -28,7 +28,7 @@ Desafio de código de uma aplicação de controle de tarefas estilo **to-do list
 ## 🌍 Traduções
 
 - [Português Brasil](./README.pt-br.md)
-- [Inglês](./../README.md)
+- [Inglês](./README.md)
 - [Espanhol](./README.es.md)
 
 ## 📝 Licença

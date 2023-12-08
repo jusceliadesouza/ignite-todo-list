@@ -2,22 +2,22 @@
 
 Desafío de código de una aplicación de control de tareas estilo **to-do list**, utilizando conceptos de estado, inmutabilidad, listas y claves, propiedades y composición.
 
-## 🛠️ Features
+## ✅ Features
 
 - [x] Añadir una nueva tarea
 - [x] Marcar y desmarcar una tarea como completada
 - [x] Eliminar de la lista de tareas
 - [ ] Mostrar progreso de finalización de tareas
 
-## Ejecutando
+## 💻 Ejecutando
 
-#### 💕 Clona el proyecto
+### 💕 Clona el proyecto
 
 ```bash
   git clone https://github.com/jusceliadesouza/ignite-todo-list.git
 ```
 
-#### 🗂️ Seleccionar carpeta
+### 🗂️ Seleccionar carpeta
 
 <!-- - [Server](/server/README.md) -->
 
@@ -28,7 +28,7 @@ Desafío de código de una aplicación de control de tareas estilo **to-do list*
 ## 🌍 Traducciones
 
 - [Portugués Brasil](./README.pt-br.Md)
-- [Inglés](./../README.Md)
+- [Inglés](./README.Md)
 - [Español](./README.es.Md)
 
 ## 📝 Licencia
