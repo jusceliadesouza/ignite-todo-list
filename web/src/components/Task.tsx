@@ -7,20 +7,32 @@ export interface Task {
   isConcluded: boolean
 }
 
-interface TaskProps {
-  title: string
+export interface TaskProps {
+  data: Task
+  removeTask: (id: number) => void
+  toogleTaskStatus: ({ id, value }: { id: number; value: boolean }) => void
 }
 
-export function Task ({ title }: TaskProps) {
+export function Task ({ data, removeTask, toogleTaskStatus }: TaskProps) {
+  function handleTaskToggle() {
+    toogleTaskStatus({ id: data.id, value: !data.isConcluded });
+  }
+  
+  function handleRemove() {
+    removeTask(data.id);
+  }
+  
+  const paragraphChecked = data.isConcluded ? '' : '';
+
   return (
     <label className='flex items-center gap-4 justify-between p-4 bg-gray-500 rounded w-full'>
       <div className='flex items-center gap-4'>
         <InputCheckBox />
 
-        <p className='text-sm'>{title}</p>
+        <p className={`text-sm ${paragraphChecked}`}>{data.title}</p>
       </div>
 
-      <DeleteButton />
+      <DeleteButton onClick={handleRemove} />
     </label>
   )
 }

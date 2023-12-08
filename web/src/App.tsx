@@ -31,6 +31,20 @@ export default function App () {
     setInputValue('')
   }
 
+  function handleToggleTask ({ id, value }: { id: number; value: boolean }) {
+    const updatedTasks = tasks.map(task =>
+      task.id === id ? { ...task, isChecked: value } : task
+    )
+
+    setTasks(updatedTasks)
+  }
+
+  function handleRemoveTask (id: number) {
+    if (window.confirm('Deseja mesmo apagar essa tarefa?')) {
+      setTasks(prevTasks => prevTasks.filter(task => task.id !== id))
+    }
+  }
+
   return (
     <div className='flex flex-col gap-4 items-center justify-center'>
       <Header
@@ -44,6 +58,8 @@ export default function App () {
           concludedTasks={concludedTasksCounter}
           tasksCreated={tasks.length}
           tasks={tasks}
+          removeTask={handleRemoveTask}
+          toogleTaskStatus={handleToggleTask}
         />
       </main>
     </div>

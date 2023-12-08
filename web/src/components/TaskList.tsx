@@ -2,15 +2,19 @@ import { EmptyTaskList } from './EmptyTaskList'
 import { Task } from './Task'
 
 interface TaskListProps {
+  tasks: Task[]
   tasksCreated: number
   concludedTasks: number
-  tasks: Task[]
+  removeTask: (id: number) => void
+  toogleTaskStatus: ({ id, value }: { id: number; value: boolean }) => void
 }
 
 export function TaskList ({
+  tasks,
   tasksCreated,
   concludedTasks,
-  tasks
+  removeTask,
+  toogleTaskStatus
 }: TaskListProps) {
   return (
     <div className='flex flex-col gap-4 items-center justify-center text-gray-300 mt-16 '>
@@ -36,7 +40,12 @@ export function TaskList ({
         ) : (
           <>
             {tasks.map(task => (
-              <Task title={task.title} />
+              <Task
+                data={task}
+                removeTask={removeTask}
+                toogleTaskStatus={toogleTaskStatus}
+                key={task.id}
+              />
             ))}
           </>
         )}

@@ -19,11 +19,12 @@ export function CreateButton ({ ...rest }: Props) {
   )
 }
 
-export function DeleteButton () {
+export function DeleteButton ({ ...rest }: Props) {
   return (
     <button
       type='submit'
       className='p-4 rounded-lg  hover:bg-gray-400 text-gray-300 hover:text-danger'
+      {...rest}
     >
       <HiOutlineTrash size={20} />
     </button>
