@@ -55,9 +55,9 @@ export default function App () {
 
       <main className='w-full max-w-[46rem] flex flex-col gap-16 p-4 sm:p-0'>
         <TaskList
-          concludedTasks={concludedTasksCounter}
-          tasksCreated={tasks.length}
           tasks={tasks}
+          tasksCreated={tasks.length}
+          concludedTasks={concludedTasksCounter}
           removeTask={handleRemoveTask}
           toogleTaskStatus={handleToggleTask}
         />

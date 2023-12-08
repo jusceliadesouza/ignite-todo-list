@@ -1,5 +1,5 @@
+import { CheckBox } from './Checkbox'
 import { DeleteButton } from './Button'
-import { InputCheckBox } from './Input'
 
 export interface Task {
   id: number
@@ -7,7 +7,7 @@ export interface Task {
   isConcluded: boolean
 }
 
-export interface TaskProps {
+interface TaskProps {
   data: Task
   removeTask: (id: number) => void
   toogleTaskStatus: ({ id, value }: { id: number; value: boolean }) => void
@@ -21,13 +21,13 @@ export function Task ({ data, removeTask, toogleTaskStatus }: TaskProps) {
   function handleRemove() {
     removeTask(data.id);
   }
-  
-  const paragraphChecked = data.isConcluded ? '' : '';
+
+  const paragraphChecked = data.isConcluded ? 'text-blue' : '';
 
   return (
     <label className='flex items-center gap-4 justify-between p-4 bg-gray-500 rounded w-full'>
       <div className='flex items-center gap-4'>
-        <InputCheckBox />
+        <CheckBox onClick={handleTaskToggle}/>
 
         <p className={`text-sm ${paragraphChecked}`}>{data.title}</p>
       </div>
