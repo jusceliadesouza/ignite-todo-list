@@ -1,26 +1,36 @@
 # ToDo List
 
-Desafio de código de uma aplicação de controle de tarefas estilo **to-do list**, utilizando conceitos de estado, imutabilidade, listas e chaves, propriedades e componetização.
+Code challenge of a task control application **to-do list**, using concepts of state, immutability, lists and keys, properties and componetization.
 
-## Features
+## 🛠️ Features
 
-- [x] Adicionar uma nova tarefa
-- [x] Marcar e desmarcar uma tarefa como concluída
-- [x] Remover de tarefa da listagem
-- [ ] Mostrar progresso de conclusão das tarefas
+- [x] Add a new task
+- [x] Mark and deselect a task as complete
+- [x] Delete from task from list
+- [ ] Show task completion progress
 
-## 🔧 Executando
+## 🔧 Running
 
-### Clone o projeto
+### 💕 Clone the project
 
 ```bash
-  git clone https://github.com/jusceliadesouza/ignite-todo-list.git
+  git clone https:///github.com/jusceliadesouza/ignite-todo-list.git
 ```
 
-### Selecione a pasta
+### 🗂️ Select the folder
 
 <!-- - [Server](/server/README.md) -->
 
 - [Web](/web/README.md)
 
 - [Mobile](/mobile/README.md)
+
+## 🌍 Translations
+
+- [Portuguese Brazil](./README.pt-br.Md)
+- [English](./../README.Md)
+- [Spanish](./README.es.Md)
+
+## 📝 License
+
+This project is under the [MIT](./LICENSE) license.

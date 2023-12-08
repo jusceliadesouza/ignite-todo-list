@@ -39,3 +39,5 @@ Usando `yarn`:
 ```html
   http://localhost:5173
 ```
+
+[Ir para o README inicial](../README.md)
