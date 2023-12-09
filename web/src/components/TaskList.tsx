@@ -1,23 +1,23 @@
-import { EmptyTaskList } from './EmptyTaskList'
-import { Task } from './Task'
+import { EmptyTaskList } from './EmptyTaskList';
+import { Task } from './Task';
 
 interface TaskListProps {
-  tasks: Task[]
-  tasksCreated: number
-  concludedTasks: number
-  removeTask: (id: number) => void
-  toogleTaskStatus: ({ id, value }: { id: number; value: boolean }) => void
+  tasks: Task[];
+  tasksCreated: number;
+  concludedTasks: number;
+  removeTask: (id: number) => void;
+  toggleTaskStatus: ({ id, value }: { id: number; value: boolean }) => void;
 }
 
-export function TaskList ({
+export function TaskList({
   tasks,
   tasksCreated,
   concludedTasks,
   removeTask,
-  toogleTaskStatus
+  toggleTaskStatus,
 }: TaskListProps) {
   return (
-    <div className='flex flex-col gap-4 items-center justify-center text-gray-300 mt-16 '>
+    <div className='flex flex-col gap-4 items-center justify-center text-gray-300 mt-16'>
       <div className='w-full flex justify-between text-gray-200'>
         <div className='flex gap-2 items-center font-bold'>
           <h2 className='text-blue'>Tarefas criadas</h2>
@@ -39,17 +39,17 @@ export function TaskList ({
           <EmptyTaskList />
         ) : (
           <>
-            {tasks.map(task => (
+            {tasks.map((task) => (
               <Task
+                key={task.id}
                 data={task}
                 removeTask={removeTask}
-                toogleTaskStatus={toogleTaskStatus}
-                key={task.id}
+                toggleTaskStatus={toggleTaskStatus}
               />
             ))}
           </>
         )}
       </div>
     </div>
-  )
+  );
 }

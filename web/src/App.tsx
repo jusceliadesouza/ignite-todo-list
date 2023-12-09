@@ -1,47 +1,42 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import { Task } from './components/Task'
-import { TaskList } from './components/TaskList'
+import { Task } from './components/Task';
+import { TaskList } from './components/TaskList';
 
-import Header from './components/Header'
+import Header from './components/Header';
 
-export default function App () {
-  const [tasks, setTasks] = useState<Task[]>([])
-  const [inputValue, setInputValue] = useState('')
+export default function App() {
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [inputValue, setInputValue] = useState('');
 
-  const concludedTasksCounter = tasks.filter(task => task.isConcluded).length
+  const concludedTasksCounter = tasks.filter((task) => task.isConcluded).length;
 
-  /**
-   * O (prevTasks) evita que o React sobrescreva o estado anterior. Assim, o
-   * React irá pegar o estado anterior e adicionar o novo estado. Isso torna a
-   * aplicação mais clara e evita bugs.
-   */
-  function handleAddTask () {
+  function handleAddTask() {
     if (!inputValue) {
-      return
+      return;
     }
 
     const newTask: Task = {
       id: new Date().getTime(),
       title: inputValue,
-      isConcluded: false
-    }
+      isConcluded: false,
+    };
 
-    setTasks(prevTasks => [...prevTasks, newTask])
-    setInputValue('')
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+    setInputValue('');
   }
 
-  function handleToggleTask ({ id, value }: { id: number; value: boolean }) {
-    const updatedTasks = tasks.map(task =>
-      task.id === id ? { ...task, isChecked: value } : task
-    )
+  function handleToggleTask({ id, value }: { id: number; value: boolean }) {
+    const updatedTasks = tasks.map((task) =>
+      task.id === id ? { ...task, isConcluded: value } : task
+    );
 
-    setTasks(updatedTasks)
+    setTasks(updatedTasks);
   }
 
-  function handleRemoveTask (id: number) {
+  function handleRemoveTask(id: number) {
     if (window.confirm('Deseja mesmo apagar essa tarefa?')) {
-      setTasks(prevTasks => prevTasks.filter(task => task.id !== id))
+      setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
     }
   }
 
@@ -59,9 +54,9 @@ export default function App () {
           tasksCreated={tasks.length}
           concludedTasks={concludedTasksCounter}
           removeTask={handleRemoveTask}
-          toogleTaskStatus={handleToggleTask}
+          toggleTaskStatus={handleToggleTask}
         />
       </main>
     </div>
-  )
+  );
 }
