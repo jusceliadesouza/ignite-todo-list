@@ -12,9 +12,9 @@
   </a>
 </p>
 
-# ToDo List
+# 📝 Projeto ToDo List
 
-## 📝 Sumário
+## 📖 Sumário
 
 - [Sobre](#📖-sobre)
 - [Recursos](#✅-recursos)
@@ -26,7 +26,7 @@
 
 ## 📖 Sobre
 
-❗Este projeto foi desenvolvido durante o curso [Ignite](https://encr.pw/conheca-o-one) da [Rocketseat](https://rocketseat.com.br/), trilha ReactJS, módulo 1.
+❗Este projeto foi desenvolvido durante o curso [Ignite](https://encr.pw/conheca-o-one) da [Rocketseat](https://rocketseat.com.br/), trilha **ReactJS**, módulo 1.
 
 O objetivo é criar uma aplicação de controle de tarefas estilo **to-do list**, utilizando conceitos de estado, imutabilidade, listas e chaves, propriedades e componetização. O projeto foi desenvolvido utilizando ReactJS, TypeScript, TailwindCSS, dentre outras tecnologias.  
 
@@ -52,7 +52,7 @@ Este projeto pode ser melhorado com as seguintes funcionalidades:
 - [ ] Filtrar tarefas por data de criação
 - [ ] Filtrar tarefas por data de edição
 - [ ] Filtrar tarefas por data de remoção
-- [ ] Salvar a listagem de tarefas no localStorage
+<!-- - [ ] Salvar a listagem de tarefas no localStorage -->
 
 ## 💻 Executando
 
@@ -62,19 +62,19 @@ Este projeto pode ser melhorado com as seguintes funcionalidades:
   git clone https://github.com/jusceliadesouza/ignite-todo-list.git
 ```
 
-### 🗂️ Selecione a pasta
+### 🗂️ Selecione a pasta desejada
 
 <p style="display: flex; gap:16px">
-  <a href="web/README.md" rel="noopener noreferrer">
+  <a href="#" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/-Api-yellow?style=for-the-badge"
-      alt="Server">
+      alt="Api">
   </a>
-  <a href="https://instagram.com/jusceliadesouzaon">
+  <a href="web/README.md">
     <img src="https://img.shields.io/badge/-Web-blue?style=for-the-badge"
       alt="Web">
   </a>
-  <a href="mailto:jusceliadesousa@gmail.com">
-    <img src="https://img.shields.io/badge/-Mobile-darkred?style=for-the-badge" alt="Gmail">
+  <a href="mobile/README.md">
+    <img src="https://img.shields.io/badge/-Mobile-darkred?style=for-the-badge" alt="Mobile">
   </a>
 </p>
 
@@ -99,9 +99,6 @@ Nesta seção estão listados alguns links úteis para o desenvolvimento do proj
 - [ReactJS](https://reactjs.org/) - Framework JavaScript para Web
 - [TailwindCSS](https://tailwindcss.com/) - Framework CSS para estilização
 - [React Icons](https://react-icons.github.io/react-icons/) - Ícones para React com suporte a TypeScript
-<!-- - [SASS](https://sass-lang.com/) -->
-<!-- - [Axios](https://axios-http.com/) -->
-<!-- - [MirageJS](https://miragejs.com/) -->
 
 ## 📝 Licença
 
