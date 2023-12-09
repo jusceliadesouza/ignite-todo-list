@@ -3,18 +3,25 @@
 ## 📖 Resumen
 
 - [Acerca de](#✅-acerca-de)
-- [Recursos](#📝-resumen)
+- [Recursos](#)
 - [Siguiente nivel](#🚀-siguiente-nivel)
 - [Ejecutando](#💻-ejecutando)
 - [Cómo contribuir](#🤝-cómo-contribuir)
 - [Licencia](#📝-licencia)
 - [Contacto](#📫-contacto)
 
-## ✅ Acerca de
+## 📖 Acerca de
 
 Este proyecto se desarrolló durante el curso [Ignite](https://encr.pw/conheca-o-one) de [Rocketseat](https://rocketseat.com.br/), track **ReactJS**, módulo 1.
 
-El objetivo es crear una aplicación de control de tareas estilo **to-do list**, utilizando conceptos de estado, inmutabilidad, listas y claves, propiedades y composición. El proyecto fue desarrollado utilizando ReactJS, typescript, TailwindCSS, entre otras tecnologías.  
+El objetivo es crear una aplicación de control de tareas estilo **to-do list**, utilizando conceptos de estado, inmutabilidad, listas y claves, propiedades y composición. El proyecto fue desarrollado utilizando ReactJS, typescript, TailwindCSS, entre otras tecnologías.
+
+## ✅ Recursos
+
+- [x] Añadir una nueva tarea
+- [x] Marcar y desmarcar una tarea como completada
+- [x] Eliminar de la lista de tareas
+- [ ] Mostrar progreso de finalización de tareas
 
 ## 🚀 Siguiente nivel
 
