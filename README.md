@@ -1,14 +1,14 @@
-<p style="display: flex; Justify-content: flex-end; gap:16px;">
-  <a href="README.pt-br.Md">
-    <img src="https://img.shields.io/badge/Portuguese-2D2C2A?style=for-the-badge" alt="Portuguese">
+<p style="display: flex; justify-content: flex-end; gap:16px;">
+  <a href="README.pt-br.md">
+    <img src="https://img.shields.io/badge/Português-2D2C2A?style=for-the-badge" alt="Português">
   </a>
-  <a href="README.Md">
-    <img src="https://img.shields.io/badge/English-2D2C2A?style=for-the-badge"
-      alt="English">
+  <a href="README.md">
+    <img src="https://img.shields.io/badge/Inglês-2D2C2A?style=for-the-badge"
+      alt="Inglês">
   </a>
-  <a href="README.es.Md">
-    <img src="https://img.shields.io/badge/Spanish-2D2C2A?style=for-the-badge"
-      alt="Spanish">
+  <a href="README.es.md">
+    <img src="https://img.shields.io/badge/Espanhol-2D2C2A?style=for-the-badge"
+      alt="Espanhol">
   </a>
 </p>
 
